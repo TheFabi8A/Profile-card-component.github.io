@@ -16,13 +16,13 @@ body {
     font-size: 18px;
     font-family: Kumbh-Sans, sans-serif;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     background:
-        url("images/bg-pattern-bottom.svg") 150%  / 50%,
-        url("images/bg-pattern-top.svg") top left / 50%;
+        url("images/bg-pattern-bottom.svg") calc(100% + 150px) calc(100% + 500px),
+        url("images/bg-pattern-top.svg") -150px calc(100% - 300px);
     background-repeat: no-repeat;
+    background-size: 60%;
     background-color: var(--dark-cyan);
 }
 
@@ -104,6 +104,10 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+    body {
+        min-height: 90vh;
+    }
+
     .pattern-top {
         left: -200px;
         top: -200px;
