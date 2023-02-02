@@ -103,9 +103,15 @@ body {
     font-size: 0.7em;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 767px) {
     body {
         min-height: 90vh;
+        background:
+            url("images/bg-pattern-bottom.svg") calc(100% + 175px) calc(100% + 175px),
+            url("images/bg-pattern-top.svg") -175px -175px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--dark-cyan);
     }
 
     .pattern-top {
